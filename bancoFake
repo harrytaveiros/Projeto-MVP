@@ -1,0 +1,68 @@
+--  Tabela de Usuários 
+
+CREATE TABLE Users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL, 
+    isAdmin BOOLEAN DEFAULT FALSE,
+    registration_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+--  Tabela de Comentários (Comments)
+
+CREATE TABLE Comments (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    pageId VARCHAR(50) NOT NULL, -- Chave de identificação da página 
+    authorId INT,
+    text TEXT NOT NULL,
+    creationDate DATE NOT NULL,
+    
+    -- Chave estrangeira para Users
+    FOREIGN KEY (authorId) REFERENCES Users(id)
+        ON DELETE SET NULL 
+);
+
+-- Dados de Exemplo 
+
+-- botando o Usuário Administrador (Simulação do 'admin@safeman.com' no main.js)
+INSERT INTO Users (nome, email, password_hash, isAdmin) 
+VALUES ('SafeMan Admin', 'admin@safeman.com', 'hash_simulado_admin', TRUE);
+
+-- criando Usuários Normais de Exemplo
+INSERT INTO Users (nome, email, password_hash) 
+VALUES 
+    ('Ana Silva', 'ana.silva@teste.com', 'hash_simulado_1'),
+    ('Pedro Santos', 'pedro.santos@teste.com', 'hash_simulado_2'),
+    ('Lucas Oliveira', 'lucas.o@teste.com', 'hash_simulado_3');
+
+
+
+-- Comentários de Exemplo
+
+-- Comentários na página 'infancia' (pageId: infancia)
+INSERT INTO Comments (pageId, authorId, text, creationDate) 
+VALUES 
+    ('infancia', 3, 'Muito bom o lembrete sobre a importância da vacinação!', '2025-11-01'),
+    ('infancia', 2, 'As dicas sobre sono e higiene bucal são valiosas para os pais.', '2025-11-05');
+
+
+
+-- Comentários na página adolescencia (pageId: adolescencia)
+INSERT INTO Comments (pageId, authorId, text, creationDate) 
+VALUES 
+    ('adolescencia', 1, 'Ótimo conteúdo sobre saúde mental na adolescência e sinais de alerta.', '2025-11-10');
+
+
+
+-- Comentários na página adulto (pageId: vida-adulta)
+INSERT INTO Comments (pageId, authorId, text, creationDate) 
+VALUES 
+    ('vida-adulta', 4, 'O foco em check-ups anuais e gerenciamento de estresse é fundamental. Ótimo artigo!', '2025-11-11');
+
+
+
+-- Comentário na página idoso (pageId: terceira-idade)
+INSERT INTO Comments (pageId, authorId, text, creationDate) 
+VALUES 
+    ('terceira-idade', 1, 'As informações sobre polifarmácia são muito relevantes. Obrigado, SafeMan.', '2025-11-12');
