@@ -25,11 +25,11 @@ Um dos principais diferenciais técnicos deste projeto no frontend é a manipula
 ## 👨‍💻 Equipe Desenvolvedora (Grupo MVP)
 
 Este projeto foi idealizado e desenvolvido por:
-* Harry Rocha[cite: 1]
-* Iandro Augusto[cite: 1]
-* Erick Emanuel[cite: 1]
-* Guilerme Sousa[cite: 1]
-* Brunno Lima[cite: 1]
-* Emerson Melo[cite: 1]
-* Guilherme Augusto[cite: 1]
-* Enzo Gabriel[cite: 1]
+* Harry Rocha
+* Iandro Augusto
+* Erick Emanuel
+* Guilerme Sousa
+* Brunno Lima
+* Emerson Melo
+* Guilherme Augusto
+* Enzo Gabriel
