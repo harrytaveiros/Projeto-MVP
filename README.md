@@ -22,18 +22,6 @@ Um dos principais diferenciais técnicos deste projeto no frontend é a manipula
 * **JavaScript (Vanilla):** Responsável por toda a lógica de negócios no lado do cliente, manipulação do DOM, algoritmos de ordenação e simulação de banco de dados via LocalStorage.
 * **SQL:** Arquivo de modelagem do banco de dados relacional criado com tabelas de `Users` e `Comments`, deixando a estrutura preparada para uma futura integração com uma API/Backend.
 
-## 👨‍💻 Equipe Desenvolvedora (Grupo MVP)
-
-Este projeto foi idealizado e desenvolvido por:
-* Harry Rocha
-* Iandro Augusto
-* Erick Emanuel
-* Guilerme Sousa
-* Brunno Lima
-* Emerson Melo
-* Guilherme Augusto
-* Enzo Gabriel
-
 
 ## Visualização do Projeto
 https://harrytaveiros.github.io/SafeMan/
