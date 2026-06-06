@@ -33,3 +33,7 @@ Este projeto foi idealizado e desenvolvido por:
 * Emerson Melo
 * Guilherme Augusto
 * Enzo Gabriel
+
+
+## Visualização do Projeto
+https://harrytaveiros.github.io/SafeMan/
